@@ -20,6 +20,15 @@ const Filter = ({ filterItem, uniqueList, setPizzaData, PizzaApi }) => {
     <>
       <nav className="navbar">
         <div className="btn-group">
+        <button
+            className="btn-group__item"
+            onClick={() => {
+              setPizzaData(PizzaApi);
+              setSortBy(null);
+            }}
+          >
+            All
+          </button>
           {uniqueList?.map((data) => {
             return (
               <button
@@ -31,15 +40,7 @@ const Filter = ({ filterItem, uniqueList, setPizzaData, PizzaApi }) => {
               </button>
             );
           })}
-          <button
-            className="btn-group__item"
-            onClick={() => {
-              setPizzaData(PizzaApi);
-              setSortBy(null);
-            }}
-          >
-            All
-          </button>
+          
           <button
             className={`btn-group__item ${
               sortBy === 'price' ? 'btn-group__item--active' : ''
