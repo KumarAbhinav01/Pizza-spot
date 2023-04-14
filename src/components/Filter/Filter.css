@@ -27,31 +27,6 @@
     text-transform: capitalize;
 }
 
-.btn-group__item:hover {
-    border: none;
-    padding: 1.5rem 3rem;
-    background-color: rgb(255, 255, 255);
-    color: rgb(33, 33, 33);
-    cursor: pointer;
-    margin: 0;
-    font-size: 17px;
-    box-shadow: inset 0px 0px 0px -15px rebeccapurple;
-    transition: all 300ms ease-out;
-    text-transform: capitalize;
-}
-
-.cart_icon{
-    float: right;
-    margin-right: 50px;
-    cursor: pointer;
-    margin-top: -45px;
-    color: black;
-}
-
-.cart_icon:hover{
-    color: rebeccapurple ;
-}
-
 .btn-group__item:last-child {
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -86,4 +61,33 @@
 .btn-group__item--active:after {
     opacity: 1;
     transform: translatey(-2px);
+}
+
+.cart_icon{
+    float: right;
+    margin-right: 50px;
+    cursor: pointer;
+    margin-top: -45px;
+    color: black;
+}
+
+.cart_icon:hover{
+    color: rebeccapurple ;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .navbar {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .btn-group__item {
+        padding: 1rem 2rem;
+        font-size: 14px;
+    }
+
+    .cart_icon{
+        margin-right: 20px;
+    }
 }
