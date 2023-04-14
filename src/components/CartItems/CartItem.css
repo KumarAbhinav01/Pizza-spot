@@ -132,3 +132,42 @@
     margin-left: 10px;
     font-weight: normal;
     }
+
+    @media (max-width: 768px) {
+      .cartItem {
+      flex-direction: column;
+      align-items: center;
+      }
+      
+      .cartItem__image {
+      width: 100%;
+      margin-bottom: 10px;
+      max-width: 350px; /* add this line to avoid stretching the image */
+      }
+      
+      .cartItem__details {
+      width: 100%; /* add this line to make the details section take full width /
+      margin-bottom: 10px; / add some spacing between the details section and actions */
+      }
+      
+      .cartItem__actions {
+      flex-direction: row; /* make the action buttons align horizontally /
+      justify-content: space-between; / spread the buttons evenly /
+      width: 100%; / make the actions section take full width */
+      }
+      
+      .cartItem__qty {
+      margin-bottom: 10px; /* add some spacing between the quantity input and buttons */
+      }
+      
+      .actions__deleteItemBtn {
+      width: 30px; /* make the delete button smaller */
+      height: 30px;
+      border-radius: 50%;
+      }
+      
+      .actions__deleteItemBtn img {
+      width: 20px; /* make the delete icon smaller */
+      height: 20px;
+      }
+      }

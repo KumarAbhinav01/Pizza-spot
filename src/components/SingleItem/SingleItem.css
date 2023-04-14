@@ -124,3 +124,48 @@
     margin-left: 10px;
     font-weight: normal;
     }
+
+    @media (max-width: 768px) {
+        .singleItem {
+        flex-direction: column;
+        width: 100%;
+        }
+        
+        .singleItem__image {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        margin-bottom: 1rem;
+        }
+        
+        .singleItem__details {
+        width: 100%;
+        }
+        
+        .details__title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+        }
+        
+        .details__price {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        }
+        
+        .details__tag {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        }
+        
+        .details__description {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        }
+        
+        .details__addBtn {
+        width: 100%;
+        }
+        }
+        
+        

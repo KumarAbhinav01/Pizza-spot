@@ -18,6 +18,7 @@
     max-width: 500px;
     position: absolute;
     left: 10%;
+    z-index: 2;
   }
   
   .heroTitle {
@@ -60,3 +61,67 @@
     object-fit: cover;
   }
   
+  @media (max-width: 1200px) {
+    .heroContent {
+    max-width: 80%;
+    left: 5%;
+    }
+    
+    .heroImage {
+    width: 40%;
+    right: -5%;
+    }
+    }
+    
+    @media (max-width: 768px) {
+    .heroContent {
+    max-width: 90%;
+    left: 5%;
+    }
+    
+    .heroTitle {
+    font-size: 3rem;
+    }
+    
+    .heroSubtitle {
+    font-size: 1.5rem;
+    }
+    
+    .heroButton {
+    font-size: 1rem;
+    padding: 0.4rem 1.2rem;
+    }
+    
+    .heroImage {
+    width: 50%;
+    right: -15%;
+    }
+    }
+    
+    @media (max-width: 576px) {
+    .heroContent {
+    max-width: 100%;
+    padding: 20px;
+    left: 0;
+    }
+    
+    .heroTitle {
+    font-size: 4rem;
+    }
+    
+    .heroSubtitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    }
+    
+    .heroButton {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    }
+    
+    .heroImage {
+      width: 50%;
+      right: -15%;
+    }
+    }
