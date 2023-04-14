@@ -1,6 +1,5 @@
 # Pizza Ordering App
 This is a simple pizza ordering app built with React and Redux.
-![Pizza Spot](https://github.com/Abhi6722/Pizza-spot/blob/main/github_screenshots/Pizza-Store.png)
 
 ## Features
 - Users can add pizzas to their cart, specifying the size and toppings.
