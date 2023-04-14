@@ -1,173 +1,173 @@
 :root {
-    --primary-color: #622ae8;
-    --secondary-color: #333333;
-    --light-color: #eeeeee;
-    --dark-color: #000000;
-  }
+  --primary-color: #622ae8;
+  --secondary-color: #333333;
+  --light-color: #eeeeee;
+  --dark-color: #000000;
+}
 
 .cartItem {
-    margin-bottom: 20px;
-    background-color: rgb(255, 255, 255);
-    padding: 1rem;
-    display: flex;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    border-radius: 10px;
-  }
-  
-  .cartItem__image {
-    width: 350px;
-    object-fit: contain;
-    border-radius: 10px;
-  }
-  
-  .cartItem__details {
-    background-color: white;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: var(--secondary-color);
-  }
-  
-  .details_title {
-    font-size: 1.8rem !important;
-    font-weight: bold;
-  }
-  
-  .details__desc {
-    font-size: 1rem;
-  }
-  
-  .details__price {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-
-  .details__tag {
-    text-transform: uppercase;
-    color: #aaa;
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-family: "Cormorant Garamond", serif;
+  margin-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
 }
-  
+
+.cartItem__image {
+  width: 350px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.cartItem__details {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--secondary-color);
+}
+
+.details_title {
+  font-size: 1.8rem !important;
+  font-weight: bold;
+}
+
+.details__desc {
+  font-size: 1rem;
+}
+
+.details__price {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.details__tag {
+  text-transform: uppercase;
+  color: #aaa;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.cartItem__actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.6rem;
+}
+
+.cartItem__qty {
+  display: flex;
+  align-items: center;
+}
+
+.cartItem__qty input {
+  padding: 10px;
+  margin-left: 0.4rem;
+  width: 60px;
+  border-radius: 10px;
+  border: 1px solid var(--secondary-color);
+  outline: none;
+}
+
+.actions__deleteItemBtn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all ease-in-out 0.7s;
+  outline: none;
+}
+
+.actions__deleteItemBtn:hover {
+  background-color: rgb(209, 15, 15);
+  color: white;
+}
+
+.actions__deleteItemBtn img {
+  width: 25px;
+  height: 25px;
+}
+
+.details__size {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.details__size div {
+  margin-bottom: 10px;
+}
+
+.details__size p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.details__size label {
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+.details__toppings {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.details__toppings div {
+  margin-bottom: 10px;
+}
+
+.details__toppings p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.details__toppings label {
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .cartItem {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cartItem__image {
+    width: 100%;
+    margin-bottom: 10px;
+    max-width: 350px;
+  }
+
+  .cartItem__details {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
   .cartItem__actions {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0.6rem;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
-  
+
   .cartItem__qty {
-    display: flex;
-    align-items: center;
+    margin-bottom: 10px;
   }
-  
-  .cartItem__qty input {
-    padding: 10px;
-    margin-left: 0.4rem;
-    width: 60px;
-    border-radius: 10px;
-    border: 1px solid var(--secondary-color);
-    outline: none;
-  }
-  
+
   .actions__deleteItemBtn {
-    width: 50px;
-    height: 50px;
-    border: 1px solid var(--secondary-color);
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    cursor: pointer;
-    transition: all ease-in-out 0.7s;
-    outline: none;
   }
-  
-  .actions__deleteItemBtn:hover {
-    background-color: rgb(209, 15, 15);
-    color: white;
-  }
-  
+
   .actions__deleteItemBtn img {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
   }
-
-  .details__size {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    }
-    
-    .details__size div {
-    margin-bottom: 10px;
-    }
-    
-    .details__size p {
-    margin-bottom: 5px;
-    font-weight: bold;
-    }
-    
-    .details__size label {
-    margin-left: 10px;
-    font-weight: normal;
-    }
-    
-    .details__toppings {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    }
-    
-    .details__toppings div {
-    margin-bottom: 10px;
-    }
-    
-    .details__toppings p {
-    margin-bottom: 5px;
-    font-weight: bold;
-    }
-    
-    .details__toppings label {
-    margin-left: 10px;
-    font-weight: normal;
-    }
-
-    @media (max-width: 768px) {
-      .cartItem {
-      flex-direction: column;
-      align-items: center;
-      }
-      
-      .cartItem__image {
-      width: 100%;
-      margin-bottom: 10px;
-      max-width: 350px; /* add this line to avoid stretching the image */
-      }
-      
-      .cartItem__details {
-      width: 100%; /* add this line to make the details section take full width /
-      margin-bottom: 10px; / add some spacing between the details section and actions */
-      }
-      
-      .cartItem__actions {
-      flex-direction: row; /* make the action buttons align horizontally /
-      justify-content: space-between; / spread the buttons evenly /
-      width: 100%; / make the actions section take full width */
-      }
-      
-      .cartItem__qty {
-      margin-bottom: 10px; /* add some spacing between the quantity input and buttons */
-      }
-      
-      .actions__deleteItemBtn {
-      width: 30px; /* make the delete button smaller */
-      height: 30px;
-      border-radius: 50%;
-      }
-      
-      .actions__deleteItemBtn img {
-      width: 20px; /* make the delete icon smaller */
-      height: 20px;
-      }
-      }
+}
