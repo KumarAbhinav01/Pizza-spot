@@ -9,7 +9,10 @@ export default function Hero(){
         <p className="heroSubtitle">
           Delicious Pizzas, Made Fresh for You
         </p>
+        <a href="#pizza">
         <button className="heroButton">Order Now</button>
+        </a>
+
       </div>
       <div className="heroImage">
         <img src="/images/pizzaimage.png" alt="Pizza" />

@@ -19,7 +19,9 @@ const App = () => {
               <>
                 <Header />
                 <Hero />
-                <Pizza />
+                <div id='pizza'>
+                  <Pizza />
+                </div>
                 <Footer />
               </>
             } />
