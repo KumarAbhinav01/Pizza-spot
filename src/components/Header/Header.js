@@ -17,7 +17,8 @@ function Header() {
                 </ul>
             </div>
             <div className="header-logo">
-                <img src="images/logo.png" alt="Store logo" />
+                <Link to="/"><img src="images/logo.png" alt="Store logo" /></Link>
+
             </div>
             <div className="header-cart">
                 <Link to="/cart"><FaShoppingCart size={30} /></Link>

@@ -16,10 +16,6 @@ const SingleItem = () => {
   const navigate = useNavigate();
 
   const addtocartbtn = (id) => {
-    const toppings = singleItem.toppings.map((option) => ({
-      title: option.title,
-      items: option.items.filter((item) => selectedToppings.includes(item.name)),
-    }));
 
     localStorage.setItem('pizzaToppings', JSON.stringify(selectedToppings));
 

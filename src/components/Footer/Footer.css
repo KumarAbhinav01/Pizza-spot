@@ -60,3 +60,29 @@
   .social a:hover {
     color: #f9a825;
   }
+
+  @media screen and (max-width: 768px) {
+    .container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    }
+    
+    .logo {
+    margin-bottom: 20px;
+    }
+    
+    .links {
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    
+    .links li {
+    margin-right: 0;
+    padding: 7px;
+    }
+    
+    .social li {
+    margin-right: 0;
+    }
+    }
