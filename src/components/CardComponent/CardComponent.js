@@ -10,13 +10,23 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Rating from '@mui/material/Rating';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    borderRadius: '10px',
+    boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)',
+    transition: 'transform 0.3s',
+    '&:hover': {
+      transform: 'scale(1.05)',
+    },
   },
   media: {
     height: 250,
+    objectFit: 'cover',
+    borderTopLeftRadius: '10px',
+    borderTopRightRadius: '10px',
   },
   veg: {
     backgroundColor: '#00e600',
@@ -47,6 +57,18 @@ const useStyles = makeStyles({
     color: '#ffc107',
     marginRight: '5px',
   },
+  cardActions: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    marginTop: '20px',
+  },
+  button: {
+    backgroundColor: '#EF3044',
+    color: '#fff',
+    '&:hover': {
+      backgroundColor: '#d92639',
+    },
+  },
 });
 
 const CardComponent = ({ pizzaData }) => {
@@ -68,28 +90,34 @@ const CardComponent = ({ pizzaData }) => {
                 <CardMedia className={classes.media} image={img_url} title={name} />
                 <CardContent>
                   <div>
-                    <Typography variant="subtitle1">
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
                       {isVeg ? (
                         <span className={classes.veg}>Veg</span>
                       ) : (
                         <span className={classes.nonveg}>Non-Veg</span>
                       )}
-                      {name}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                    </div>
+                    <Typography variant="h6">
+                        {name}
+                      </Typography>
+                    <Typography variant="body1" color="textSecondary" component="p">
                       {description}
                     </Typography>
-                    <Typography variant="subtitle1">Price: ₹ {price}</Typography>
+                    <Typography variant="h6" style={{ marginTop: '10px' }}>
+                      Price: ₹ {price}
+                    </Typography>
                     <div className={classes.rating}>
                       <Rating name="read-only" value={rating} precision={0.5} readOnly />
-                      <span className={classes.ratingStar}>{rating}</span>
+                      <Typography variant="subtitle1" style={{ marginLeft: '5px' }}>
+                        {rating}
+                      </Typography>
                     </div>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
                     <Link to={`/product/${id}`}>
-                      <span className="card-tag subtle" onClick={() => getSingleData(data)}>
-                        <AddIcon style={{ fontSize: '32px', color: 'green', cursor: 'pointer' }} />
-                      </span>
+                      <Button variant="contained" className={classes.button} endIcon={<AddIcon />} onClick={() => getSingleData(data)}>
+                        Add to Cart
+                      </Button>
                     </Link>
                   </div>
                 </CardContent>
@@ -99,6 +127,7 @@ const CardComponent = ({ pizzaData }) => {
         })}
     </Grid>
   );
+
 }
 
 export default CardComponent;
