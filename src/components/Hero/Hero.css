@@ -8,6 +8,7 @@
     background-image: url("/public/images/bg.jpg");
     color: white;
     position: relative;
+    overflow-x: hidden;
   }
   
   .heroContent {
