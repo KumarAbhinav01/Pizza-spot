@@ -38,3 +38,6 @@ Contributions to this project are welcome. If you'd like to contribute, please f
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Demo Video
+![Demo Video](https://github.com/Abhi6722/Pizza-spot/blob/main/github_screenshots/demo.gif)
