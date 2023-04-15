@@ -19,9 +19,8 @@ const CartItem = ({ cartitem, key }) => {
         dispatch(adjustQuantityAction(cartitem.id, e.target.value));
     }
 
-    const selectedSize = cartitem.size.find(sizeOption => sizeOption.items.some(sizeItem => sizeItem.selected));
-    const selectedToppings = cartitem.toppings.flatMap(toppingOption => toppingOption.items.filter(toppingItem => toppingItem.selected));
-
+    const selectedSize = cartitem.size ? cartitem.size.find(sizeOption => sizeOption.items.some(sizeItem => sizeItem.selected)) : null;
+    const selectedToppings = cartitem.toppings ? cartitem.toppings.flatMap(toppingOption => toppingOption.items.filter(toppingItem => toppingItem.selected)) : [];
 
     return (
         <>
@@ -36,7 +35,7 @@ const CartItem = ({ cartitem, key }) => {
                     <p className='details__desc'>{cartitem.description}</p>
                     <p className='details__price'>Price: ₹ {cartitem.price}</p>
                     <p className='details__tag'>{cartitem.isVeg ? "Veg" : "Non-Veg"}</p>
-                    <p className='details__selectedSize'>Selected size: {selectedSize}</p>
+                    <p className='details__selectedSize'>Selected size: {selectedSize ? selectedSize.items[0].size : "None"}</p>
                     <p className='details__selectedToppings'>Selected toppings: {selectedToppings.length > 0 ? selectedToppings.map(topping => topping.name).join(", ") : "None"}</p>
 
                     {/* show the selected size */}
