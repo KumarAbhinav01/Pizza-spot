@@ -21,8 +21,10 @@ const SingleItem = () => {
       items: option.items.filter((item) => selectedToppings.includes(item.name)),
     }));
 
+    localStorage.setItem('pizzaToppings', JSON.stringify(selectedToppings));
+
     dispatch(
-      addToCartAction(id, selectedSize, toppings)
+      addToCartAction(id, selectedSize, selectedToppings)
     );
     navigate('/cart');
   };
