@@ -4,4 +4,5 @@
     color: black;
     padding-top: 108px;
     /* padding-bottom: 80px; */
+    overflow-x: hidden;
 }
